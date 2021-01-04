@@ -29,7 +29,7 @@ class StripePaymentController extends Controller
             $totalPrice = DB::select("select SUM(quantity*product_price) as price from carts where customer_id=".$customer[0]->id);
         }
        
-        return view('stripe_payment\stripe',['totalPrice'=>$totalPrice]);
+        return view('stripe_payment/stripe',['totalPrice'=>$totalPrice]);
     }
   
     /**

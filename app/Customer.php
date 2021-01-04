@@ -31,12 +31,13 @@ class Customer extends Model
     
     public function createCustomer(array $user){
         //dd($user);
-        Customer::insert($user);
+        //Customer::insert($user);
+        $this->insert($user);
     }
     
     public  function updateCustomer($id,$data){
        // dd($data);
-        $customerObj = Customer::find($id['id']);
+        $customerObj = Customer::find($id);
        $customerObj->update($data);
     }
     

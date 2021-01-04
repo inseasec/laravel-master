@@ -45,7 +45,7 @@ class CartController extends Controller
            $customer=session()->get('customer');     
            $product_id = $request->get('product_id');
            $product=Product::find($product_id);
-           
+          // dd($product);
            // Check if product already added in cart for this customer
            $existQty=0;
            $cust_id=$customer[0]->id;

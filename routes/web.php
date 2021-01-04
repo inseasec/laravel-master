@@ -67,7 +67,7 @@ Route::get('/frontend/account/showAccountDetails', 'Frontend\AccountController@s
 Route::get('/frontend/account/authenticateUser', 'Frontend\AccountController@authenticateUser');
 
 //Route::get('/frontend/cart/addToCart/{id}', 'Frontend\CartController@addToCart');
-Route::get('/frontend/cart/addToCart', 'Frontend\CartController@addToCart');
+Route::post('/frontend/cart/addToCart', 'Frontend\CartController@addToCart');
 
 Route::get('/frontend/shopgrid/{subcat_id}', 'Frontend\ShopgridController@index');
 

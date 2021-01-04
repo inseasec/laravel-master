@@ -4,7 +4,7 @@ function addToCart(product_id){
     $.ajax({
         url: site_url + '/frontend/cart/addToCart',
         data: {product_id:product_id,qty:qty },
-        method: "get",
+        method: "post",
         headers: {
             'X-CSRF-Token': token 
         },

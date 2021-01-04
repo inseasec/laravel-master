@@ -14,6 +14,7 @@ class CategoriesController extends Controller
         
         public function createCategory(){
             $departments = DB::select('select * from departments');
+            // dept;
             return view('categories/createCategory',['departments'=>$departments]);
             
             

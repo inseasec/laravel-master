@@ -107,7 +107,7 @@ s0.parentNode.insertBefore(s1,s0);
                                     </li>
                                       @endforeach  
 
-                                    <li class="drop"><a href="blog.html">Blog</a>
+<!--                                    <li class="drop"><a href="blog.html">Blog</a>
                                         <div class="megamenu dropdown">
                                             <ul class="item item01">
                                                 <li><a href="blog.html">Blog Page</a></li>
@@ -115,7 +115,7 @@ s0.parentNode.insertBefore(s1,s0);
                                             </ul>
                                         </div>
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="contact.html">Contact</a></li>-->
                                 </ul>
                             </nav>
                         </div>

@@ -36,7 +36,8 @@
                                                </div>
                                         </div>          
                                 </div> 
-                        <form action="{{URL::to('/frontend/account/updateAccountDetails')}}" method="POST" id="account_details_form">    
+<!--                        <form action="{{URL::to('/frontend/account/updateAccountDetails')}}" method="POST" id="account_details_form">    -->
+                    <form id="account_form">
                             <div class="row">
                       
 					<div class="col-lg-6 col-12">
@@ -105,7 +106,7 @@
 <!--                                            </div>-->
                                                                     
 									<span class="form__btn text-right">
-										<button class="btn btn-primary" >Update</button>
+                                                                            <button type="button" class="btn btn-primary" formaction="" onclick="updateAccountDetails()">Update</button>
 <!--                                                                                <button type="submit" formaction="{{URL::to('/frontend/account/authenticateUser')}}">Login</button>-->
                                                                         </span>
 <!--                                                                           <div class="form__btn">

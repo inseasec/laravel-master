@@ -75,10 +75,48 @@ function validateForm(){
 //        }
     });
 }
-
+function updateAccountDetails(){
+    var token = $('#csrf-token').val();
+    var data = $('#account_form').serialize();
+    console.log(data);
+    // var qty = $('#'+product_id+'_qty').val();
+   $.ajax({
+        url: site_url + '/frontend/account/updateAccountDetails',
+        data: data,
+        method: "post",
+//        headers: {
+//            'X-CSRF-Token': token 
+//        },
+        
+    }).done(function(response){
+        console.log(response);
+        if(response == 'true'){
+            //bootbox.alert('Cart updatedsuccessfully');
+            Swal.fire({
+                position: 'top',
+                type: 'success',
+                title: 'Account Detail Updated Successfully',
+                showConfirmButton: false,
+                timer: 4000,
+                width: 300,
+                toast: true
+            });
+         window.location.href = site_url + "/frontend/home";
+        }else{
+            Swal.fire({
+                position: 'top',
+                type: 'error',
+                title: 'Problem occured during updation',
+                showConfirmButton: false,
+                timer: 4000,
+                width: 300,
+                toast: true
+            });
+        }
+    });
+}
 $(document).ready(function(){
     validateForm();
 });
 
-var data = form.serialize();
-window.location.href = site_url + "/frontend/home";
+

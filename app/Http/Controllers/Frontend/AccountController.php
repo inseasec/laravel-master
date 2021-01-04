@@ -95,11 +95,9 @@ class AccountController extends Controller
     
    public function updateAccountDetails(Request $request){
           
+      
           $customer=session()->get('customer');    
           $customer_id=$customer[0]->id;
-          $cust_id=[];
-          $cust_id['id']=$customer[0]->id;
-          
           
             $customerDetails=[];
             $customerDetails['name']=$request->get('name');
@@ -111,11 +109,14 @@ class AccountController extends Controller
             $customerDetails['postcode']=$request->get('postcode');
             $customerDetails['phone']=$request->get('phone');
 
+//            $customerObj=new Customer();
+//            $customerObj->updateCustomer($customer_id, $customerDetails);
+            
           $customerObj=Customer::find($customer_id);
-          $customerObj->updateCustomer($cust_id,$customerDetails);
+          $customerObj->update($customerDetails);
           
-           return redirect()->action('Frontend\HomeController@index')->with('status', 'Customer Account authenticated successfully!!!');
-         // return redirect()->action('Frontend\AccountController@showAccountDetails')->with('status', 'Account Details updated Succesfully!!!');
+           //return redirect()->action('Frontend\HomeController@index')->with('status', 'Customer Account authenticated successfully!!!');
+         return "true";
         
     }
     
